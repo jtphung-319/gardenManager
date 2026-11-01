@@ -3,45 +3,69 @@
 // Garden Manager Project
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class gardenManager
 {
    public static void main(String[] args)
    
    {
-      
-      int userChoice;
-      Scanner gM = new Scanner(System.in);
-   
-      System.out.println("Hello user, welcome to Garden Manager."
-      + "\nThis program wll help you organize your gardening"
-      + "\nneeds by keeping everything in one place!"
+     
+      System.out.println("Hello user, welcome to Garden Manager." // introduction, describes
+      + "\nThis program wll help you organize your gardening"     // the purpose of this
+      + "\nneeds by keeping everything in one place!"             // program
       + "\n"
-      + "\nPlease type the number based on your desired category:"
+      + "\nYou will enter inputs according to these categories:"
       + "\n"
       + "\n1 - Tools\n2 - Plants\n3 - Expenses"
       + "\n");
       
-      userChoice = gM.nextInt();
+      ArrayList<String> toolList = new ArrayList<>();
+      ArrayList<String> plantList = new ArrayList<>();
+      ArrayList<String> expenseList = new ArrayList<>();
       
-      switch(userChoice)
-      {
-      case 1:
-         System.out.println("You chose Tools. What tools do you want to record?");
-         break;
-      case 2:
-         System.out.println("You chose Plants. What plants do you want to record?");
-         break;
-      case 3:
-         System.out.println("You chose Expenses. What expenses do you want to record?");
-         break;
-      default:
-         System.out.println("Sorry, that was an invalid choice. Please try again");
+      int userChoice;
+      int tCost = 0; //tool
+      int pCost = 0; //plant
+      int totalCost;
+      int cost = 0;
+      int quantity = 0;
+      String input;
+      Scanner gM = new Scanner(System.in);
+      Scanner c = new Scanner(System.in);
+      Scanner q = new Scanner(System.in);
+      
+      System.out.print("Starting with Tools, add each individual item one at a time. Enter 'exit' when satisfied\n"); // tool list
+      while(!(input = gM.nextLine()).equalsIgnoreCase("exit")){
+         toolList.add(input);
+         System.out.println("How expensive is this item in USD?");
+         cost = c.nextInt();
+         System.out.println("How many of this item do you own?");
+         quantity = q.nextInt();
+         tCost = tCost + (cost*quantity);
+         System.out.println("Next item");
       }
       
-      System.out.println("Please enter each item one at a time. Type 'exit' when you are done adding to the list\n");
+      System.out.println("Your Tool List: " + toolList);
+      System.out.println("Your Tool Expenses: $" + tCost + "\n");
       
-   
+      
+      System.out.print("Now with Plants, add each individual item one at a time. Enter 'exit' when satisfied\n"); // tool list
+      while(!(input = gM.nextLine()).equalsIgnoreCase("exit")){
+         plantList.add(input);
+         System.out.println("How expensive is this item in USD?");
+         cost = c.nextInt();
+         System.out.println("How many of this item do you own?");
+         quantity = q.nextInt();
+         pCost = pCost + (cost*quantity);
+         System.out.println("Next item");
+      }
+      
+      System.out.println("Your Plant List: " + plantList);
+      System.out.println("Your Plant Expenses: $" + pCost);
+      totalCost = tCost + pCost;
+      System.out.println("\nYour Total Expense: $" + totalCost);
+
    }
    
 }
