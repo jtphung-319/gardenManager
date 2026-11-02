@@ -66,9 +66,9 @@ public class gardenManager
       
       totalCost = tCost + pCost;
       
-      System.out.println("\nGreat! Here is a rundown of your submissions"
+      System.out.println("\nGreat! Here is a rundown of your submissions:"
       + "\nTools you own: " + toolList
-      + "\nToosl Expenses: $" + tCost
+      + "\nTools Expenses: $" + tCost
       + "\nPlants you own: " + plantList
       + "\nPlants Expenses: $" + pCost
       + "\nTotal Cost: $" + totalCost);
