@@ -64,12 +64,14 @@ public class gardenManager
       System.out.println("Your Plant List: " + plantList);
       System.out.println("Your Plant Expenses: $" + pCost);
       
-      System.out.print("\nFinally, what is your budget in USD? We will let you know how affordable this garden setup is\n"); //plant list
-      budget = gM.nextFloat();
-      
       totalCost = tCost + pCost;
-      System.out.println("\nYour Budget: $" + budget);
-      System.out.println("Your Total Expense: $" + totalCost);
+      
+      System.out.println("\nGreat! Here is a rundown of your submissions"
+      + "\nTools you own: " + toolList
+      + "\nToosl Expenses: $" + tCost
+      + "\nPlants you own: " + plantList
+      + "\nPlants Expenses: $" + pCost
+      + "\nTotal Cost: $" + totalCost);
 
    }
    
