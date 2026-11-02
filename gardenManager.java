@@ -11,58 +11,58 @@ public class gardenManager
    
    {
      
-      System.out.println("Hello user, welcome to Garden Manager." // introduction, describes
-      + "\nThis program wll help you organize your gardening"     // the purpose of this
-      + "\nneeds by keeping everything in one place!"             // program
+      System.out.println("Hello user, welcome to Garden Manager." //introduction, describes
+      + "\nThis program will help you organize your gardening"    //the purpose of this
+      + "\nneeds by keeping everything in one place!"             //program
       + "\n"
       + "\nYou will enter inputs according to these categories:"
       + "\n"
       + "\n1 - Tools\n2 - Plants\n3 - Expenses"
       + "\n");
       
-      ArrayList<String> toolList = new ArrayList<>();
+      ArrayList<String> toolList = new ArrayList<>(); //arrays to store user lists of inputs
       ArrayList<String> plantList = new ArrayList<>();
       ArrayList<String> expenseList = new ArrayList<>();
       
-      int userChoice;
-      int tCost = 0; //tool
-      int pCost = 0; //plant
-      int totalCost;
-      int cost = 0;
+      float tCost = 0; //tool
+      float pCost = 0; //plant
+      float totalCost;
+      float cost = 0;
       int quantity = 0;
       String input;
       Scanner gM = new Scanner(System.in);
       Scanner c = new Scanner(System.in);
       Scanner q = new Scanner(System.in);
       
-      System.out.print("Starting with Tools, add each individual item one at a time. Enter 'exit' when satisfied\n"); // tool list
+      System.out.print("Starting with Tools, enter a gardening tool you own. Enter 'exit' when satisfied\n"); //tool list
       while(!(input = gM.nextLine()).equalsIgnoreCase("exit")){
          toolList.add(input);
          System.out.println("How expensive is this item in USD?");
-         cost = c.nextInt();
+         cost = c.nextFloat();
          System.out.println("How many of this item do you own?");
          quantity = q.nextInt();
          tCost = tCost + (cost*quantity);
-         System.out.println("Next item");
+         System.out.println("Next item or 'exit'");
       }
       
       System.out.println("Your Tool List: " + toolList);
       System.out.println("Your Tool Expenses: $" + tCost + "\n");
       
       
-      System.out.print("Now with Plants, add each individual item one at a time. Enter 'exit' when satisfied\n"); // tool list
+      System.out.print("Now with Plants, enter a plant you own. Enter 'exit' when satisfied\n"); //plant list
       while(!(input = gM.nextLine()).equalsIgnoreCase("exit")){
          plantList.add(input);
          System.out.println("How expensive is this item in USD?");
-         cost = c.nextInt();
+         cost = c.nextFloat();
          System.out.println("How many of this item do you own?");
          quantity = q.nextInt();
          pCost = pCost + (cost*quantity);
-         System.out.println("Next item");
+         System.out.println("Next item or 'exit'");
       }
       
       System.out.println("Your Plant List: " + plantList);
       System.out.println("Your Plant Expenses: $" + pCost);
+      
       totalCost = tCost + pCost;
       System.out.println("\nYour Total Expense: $" + totalCost);
 
