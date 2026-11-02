@@ -28,6 +28,7 @@ public class gardenManager
       float pCost = 0; //plant
       float totalCost;
       float cost = 0;
+      float budget = 0;
       int quantity = 0;
       String input;
       Scanner gM = new Scanner(System.in);
@@ -63,8 +64,12 @@ public class gardenManager
       System.out.println("Your Plant List: " + plantList);
       System.out.println("Your Plant Expenses: $" + pCost);
       
+      System.out.print("\nFinally, what is your budget in USD? We will let you know how affordable this garden setup is\n"); //plant list
+      budget = gM.nextFloat();
+      
       totalCost = tCost + pCost;
-      System.out.println("\nYour Total Expense: $" + totalCost);
+      System.out.println("\nYour Budget: $" + budget);
+      System.out.println("Your Total Expense: $" + totalCost);
 
    }
    
