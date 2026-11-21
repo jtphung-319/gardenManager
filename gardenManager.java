@@ -16,7 +16,8 @@ public class gardenManager
       + "\nHere are your options:"
       + "\n1 - Novice"
       + "\n2 - Amateur"
-      + "\n3 - Expert");
+      + "\n3 - Expert"
+      + "\n4 - Choose for me!");
       
       int userExp;
       Scanner uE = new Scanner(System.in);
@@ -33,8 +34,24 @@ public class gardenManager
       case 3:
          System.out.println("You are an expert, we are pleased to have you! Maybe you can teach us something\n");
          break;
+      case 4:
+         System.out.println("Very well, please enter the amount of years that you believe you have been gardening:\n");
+         
+         int years;
+         Scanner y = new Scanner(System.in);
+         years = y.nextInt();
+         
+         if(years == 0)
+            System.out.println("You are a novice, welcome to gardening! We will help you get on your feet\n");
+         else if(years < 3)
+            System.out.println("You are an amateur, no stranger to gardening! We hope to improve your understanding\n");
+         else if(years >= 3)
+            System.out.println("You are an expert, we are pleased to have you! Maybe you can teach us something\n");
+         else
+            System.out.println("How many years? Try again, please\n");
+         
       default:
-         System.out.println("You are a what? Try again, please");
+         System.out.println("You are a what? Try again, please\n");
       } 
       
       System.out.println("Hello user, welcome to Garden Manager." //introduction, describes
