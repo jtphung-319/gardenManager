@@ -10,7 +10,33 @@ public class gardenManager
    public static void main(String[] args)
    
    {
-     
+   
+      System.out.println("Hello! Before we get started, describe"
+      + "\nyour level of experience in Gardening."
+      + "\nHere are your options:"
+      + "\n1 - Novice"
+      + "\n2 - Amateur"
+      + "\n3 - Expert");
+      
+      int userExp;
+      Scanner uE = new Scanner(System.in);
+      userExp = uE.nextInt();
+      
+      switch(userExp)
+      {
+      case 1:
+         System.out.println("You are a novice, welcome to gardening! We will help you get on your feet\n");
+         break;
+      case 2:
+         System.out.println("You are an amateur, no stranger to gardening! We hope to improve your understanding\n");
+         break;
+      case 3:
+         System.out.println("You are an expert, we are pleased to have you! Maybe you can teach us something\n");
+         break;
+      default:
+         System.out.println("You are a what? Try again, please");
+      } 
+      
       System.out.println("Hello user, welcome to Garden Manager." //introduction, describes
       + "\nThis program will help you organize your gardening"    //the purpose of this
       + "\nneeds by keeping everything in one place!"             //program
