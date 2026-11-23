@@ -14,4 +14,7 @@ Running the Application: When Garden Manager is open, navigate to the top of the
 
 Trying Sprint 1: Follow the program's given instructions to navigate via user inputs. If an error occurs, end run and try again
 
-Known Limitations: Few error-cases or restraints to what can be typed outside of what is allowed by default
+Trying Sprint 2: Follow the program's given instructions to navigate via user inputs again. This time, I have added the ability to choose level of experience
+TEST CASES: A new java file added to the folder. It has the pass/fail scenarios built in already
+
+Known Limitations: Few error-cases or restraints to what can be typed outside of what is allowed by default. Possible inability to apply a second SOLID principle
