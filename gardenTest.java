@@ -22,13 +22,22 @@ public class gardenTest
          return "Invalid";
       }
    }
+   
+   static void test(int input, String expected){
+      String output = userChoice(input);
+      if(output==expected){
+         System.out.println("PASS: " + input);
+      }else{
+         System.out.println("FAIL: " + input);
+      }
+   }
 
    public static void main(String[] args)
    
    {
    
-      
-   
+    
+       
    }
    
 }
