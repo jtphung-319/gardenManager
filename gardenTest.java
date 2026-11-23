@@ -8,7 +8,8 @@ import java.util.ArrayList;
 public class gardenTest
 {
 
-   static String userChoice(int x){
+   static String userChoice(int x)
+   {
    
       if(x==1){
          return "Novice";
@@ -23,7 +24,8 @@ public class gardenTest
       }
    }
    
-   static void test(int input, String expected){
+   static void test(int input, String expected)
+   {
       String output = userChoice(input);
       if(output==expected){
          System.out.println("PASS: " + input);
@@ -33,11 +35,20 @@ public class gardenTest
    }
 
    public static void main(String[] args)
-   
    {
-   
-    
+       test(1, "Novice"); // passes
+       test(3, "Expert");
+       test(5, "Invalid");
+       test(2, "Amateur");
+       test(0, "Invalid");
        
+       System.out.println("");
+         
+       test(1, "Invalid"); // fails 
+       test(7, "Amateur"); 
+       test(2, "Expert"); 
+       test(3, "Novice");
+       test(1, "Novic");
    }
    
 }
